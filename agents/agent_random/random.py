@@ -2,7 +2,6 @@ import numpy as np
 import math
 import importlib
 
-# Ensure we import the standard library random, not this module
 _std_random = importlib.import_module("random")
 
 from game_utils import (
