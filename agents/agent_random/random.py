@@ -1,18 +1,23 @@
-import math
-from random import random
-
 import numpy as np
+import math
+import importlib
 
-from game_utils import BoardPiece, PlayerAction, SavedState, PLAYER1, PLAYER2, NO_PLAYER, BOARD_COLS, BOARD_ROWS, \
-    check_end_state, GameState, apply_player_action
+# Ensure we import the standard library random, not this module
+_std_random = importlib.import_module("random")
 
-'''def generate_move_random(
-    board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
-) -> tuple[PlayerAction, SavedState | None]:
-    # Choose a valid, non-full column randomly and return it as `action`
-    return action, saved_state'''
-
-
+from game_utils import (
+    BoardPiece,
+    PlayerAction,
+    SavedState,
+    apply_player_action,
+    check_end_state,
+    GameState,
+    BOARD_COLS,
+    BOARD_ROWS,
+    NO_PLAYER,
+    PLAYER1,
+    PLAYER2,
+)
 
 
 def generate_move_random(
@@ -20,6 +25,9 @@ def generate_move_random(
 ) -> tuple[PlayerAction, SavedState | None]:
     """
     Agent using Negamax with alpha-beta pruning for Connect Four.
+
+    This function avoids conflicts with a local random.py by importing the
+    standard library random module via importlib.
     """
     DEPTH = 4
 
@@ -42,10 +50,10 @@ def generate_move_random(
         score += center_array.count(player) * 3
 
         # Horizontal
-        for row in range(BOARD_ROWS):
-            row_array = list(b[row, :])
-            for col in range(BOARD_COLS - 3):
-                window = row_array[col : col + 4]
+        for r in range(BOARD_ROWS):
+            row_array = list(b[r, :])
+            for c in range(BOARD_COLS - 3):
+                window = row_array[c : c + 4]
                 score += evaluate_window(window, player)
 
         # Vertical
@@ -80,7 +88,6 @@ def generate_move_random(
 
         max_score = -math.inf
         for col in range(BOARD_COLS):
-            # check valid move
             if b[BOARD_ROWS - 1, col] != NO_PLAYER:
                 continue
             nb = b.copy()
@@ -95,7 +102,8 @@ def generate_move_random(
     # Get all valid moves
     valid_moves = [c for c in range(BOARD_COLS) if board[BOARD_ROWS - 1, c] == NO_PLAYER]
     best_score = -math.inf
-    best_move = random.choice(valid_moves)
+    # Use the stdlib random.choice to avoid conflicts
+    best_move = _std_random.choice(valid_moves)
 
     for col in valid_moves:
         nb = board.copy()
@@ -106,3 +114,101 @@ def generate_move_random(
             best_move = col
 
     return PlayerAction(best_move), saved_state
+
+
+
+
+def generate_move_random_MCTS(
+    board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
+) -> tuple[PlayerAction, SavedState | None]:
+    """
+    Agent using Monte Carlo Tree Search (MCTS) for Connect Four.
+    Each move runs a fixed number of playouts to estimate the best column.
+    """
+    # MCTS parameters
+    ITERATIONS = 1000  # number of simulations
+    EXPLORATION_COEF = math.sqrt(2)
+
+    class Node:
+        __slots__ = ("state", "player", "parent", "children", "wins", "visits", "untried_moves")
+
+        def __init__(self, state: np.ndarray, player: BoardPiece, parent=None):
+            self.state = state
+            self.player = player
+            self.parent = parent
+            self.children = []  # list of Node
+            self.wins = 0
+            self.visits = 0
+            # legal moves from this state
+            self.untried_moves = [c for c in range(BOARD_COLS) if state[BOARD_ROWS - 1, c] == NO_PLAYER]
+
+        def uct_select_child(self):
+            # pick child with highest UCT value
+            log_parent_visits = math.log(self.visits)
+            def uct(c):
+                return (c.wins / c.visits) + EXPLORATION_COEF * math.sqrt(log_parent_visits / c.visits)
+            return max(self.children, key=uct)
+
+        def expand(self):
+            # expand by creating a new child for one untried move
+            move = self.untried_moves.pop()
+            new_state = self.state.copy()
+            apply_player_action(new_state, move, self.player)
+            next_player = PLAYER1 if self.player == PLAYER2 else PLAYER2
+            child = Node(new_state, next_player, parent=self)
+            self.children.append(child)
+            return child
+
+        def update(self, result_player: BoardPiece):
+            self.visits += 1
+            if result_player == self.player:
+                self.wins += 1
+
+    def simulate(state: np.ndarray, player_to_move: BoardPiece) -> BoardPiece:
+        # play random until terminal
+        b = state.copy()
+        current = player_to_move
+        while True:
+            st = check_end_state(b, current)
+            if st == GameState.IS_WIN:
+                # previous player won
+                return PLAYER1 if current == PLAYER2 else PLAYER2
+            if st == GameState.IS_DRAW:
+                return None
+            # random playout
+            valid = [c for c in range(BOARD_COLS) if b[BOARD_ROWS - 1, c] == NO_PLAYER]
+            move = _std_random.choice(valid)
+            apply_player_action(b, move, current)
+            current = PLAYER1 if current == PLAYER2 else PLAYER2
+
+    # root of search tree
+    root = Node(board, player)
+
+    for _ in range(ITERATIONS):
+        node = root
+        # 1) Selection
+        while node.untried_moves == [] and node.children:
+            node = node.uct_select_child()
+        # 2) Expansion
+        if node.untried_moves:
+            node = node.expand()
+        # 3) Simulation
+        result = simulate(node.state, node.player)
+        # 4) Backpropagation
+        while node is not None:
+            node.update(result)
+            node = node.parent
+
+    # pick the move with highest visit count
+    best_child = max(root.children, key=lambda c: c.visits)
+    # determine which column that was
+    for col in range(BOARD_COLS):
+        # compare states
+        st = board.copy()
+        apply_player_action(st, col, player)
+        if np.array_equal(st, best_child.state):
+            return PlayerAction(col), saved_state
+
+    # Fallback
+    valid_moves = [c for c in range(BOARD_COLS) if board[BOARD_ROWS - 1, c] == NO_PLAYER]
+    return PlayerAction(_std_random.choice(valid_moves)), saved_state
