@@ -19,7 +19,6 @@ from game_utils import (
     PLAYER2,
 )
 
-
 def generate_move_random(
     board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
 ) -> tuple[PlayerAction, SavedState | None]:
