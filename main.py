@@ -68,7 +68,7 @@ def human_vs_agent(
 if __name__ == "__main__":
     #human_vs_agent(user_move)
     #human_vs_agent(generate_move_random, user_move, "Negamax-Bot", "Human")
-    #human_vs_agent(generate_move_random_MCTS, user_move, "MCTS-Bot", "Human")
-    human_vs_agent(generate_move_random_MCTS, generate_move_random_MCTS, "MCTS-Bot1", "MCTS-Bot2")
+    human_vs_agent(generate_move_random_MCTS, user_move, "MCTS-Bot", "Human")
+    #human_vs_agent(generate_move_random_MCTS, generate_move_random_MCTS, "MCTS-Bot1", "MCTS-Bot2")
     # — or — both bots
      #human_vs_agent(generate_move_random, generate_move_random,"Bot 1", "Bot 2")

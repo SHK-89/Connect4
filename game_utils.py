@@ -110,6 +110,10 @@ def apply_player_action(board: np.ndarray, action: PlayerAction, player: BoardPi
     board should be modified in place, such that it's not necessary to return
     something.
     """
+    # Check if the action is within a valid range
+    if not (0 <= action < board.shape[1]):
+        raise ValueError(f"Column {action} is out of bounds.")
+
     # Find the lowest open row in the specified column
     for row in range(INDEX_LOWEST_ROW, INDEX_HIGHEST_ROW + 1):
         if board[row, action] == NO_PLAYER:
@@ -150,17 +154,32 @@ def connected_four(board: np.ndarray, player: BoardPiece) -> bool:
 
     return False
 
-
 def check_end_state(board: np.ndarray, player: BoardPiece) -> GameState:
     """
     Returns the current game state for the current `player`, i.e. has their last
     action won (GameState.IS_WIN) or drawn (GameState.IS_DRAW) the game,
     or is play still on-going (GameState.STILL_PLAYING)?
     """
-    if connected_four(board, player):
+
+    # Check for win conditions for both players
+    player1_wins = connected_four(board, PLAYER1)
+    player2_wins = connected_four(board, PLAYER2)
+
+    # Case when both players have a win condition (which is not allowed)
+    if player1_wins and player2_wins:
+        return GameState.IS_DRAW  # Since both cannot win simultaneously, it's a draw
+
+    if player1_wins:
         return GameState.IS_WIN
-    elif np.all(board != NO_PLAYER):
+
+    if player2_wins:
+        return GameState.IS_WIN
+
+    # Check if the board is full (no empty spots)
+    elif np.all(board != NO_PLAYER):  # Full board, no empty spots
         return GameState.IS_DRAW
+
+    # If no win and the board isn't full, the game is still ongoing
     else:
         return GameState.STILL_PLAYING
 
