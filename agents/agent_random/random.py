@@ -18,8 +18,9 @@ from game_utils import (
     PLAYER2,
 )
 
+
 def generate_move_random(
-    board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
+        board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
 ) -> tuple[PlayerAction, SavedState | None]:
     """
     Agent using Negamax with alpha-beta pruning for Connect Four.
@@ -51,14 +52,14 @@ def generate_move_random(
         for r in range(BOARD_ROWS):
             row_array = list(b[r, :])
             for c in range(BOARD_COLS - 3):
-                window = row_array[c : c + 4]
+                window = row_array[c: c + 4]
                 score += evaluate_window(window, player)
 
         # Vertical
         for c in range(BOARD_COLS):
             col_array = list(b[:, c])
             for r in range(BOARD_ROWS - 3):
-                window = col_array[r : r + 4]
+                window = col_array[r: r + 4]
                 score += evaluate_window(window, player)
 
         # Positive diagonal
@@ -114,10 +115,8 @@ def generate_move_random(
     return PlayerAction(best_move), saved_state
 
 
-
-
 def generate_move_random_MCTS(
-    board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
+        board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
 ) -> tuple[PlayerAction, SavedState | None]:
     """
     Agent using Monte Carlo Tree Search (MCTS) for Connect Four.
@@ -127,7 +126,7 @@ def generate_move_random_MCTS(
     ITERATIONS = 1000  # number of simulations
     EXPLORATION_COEF = math.sqrt(2)
 
-    class Node:
+    class MCTSNode:
         __slots__ = ("state", "player", "parent", "children", "wins", "visits", "untried_moves")
 
         def __init__(self, state: np.ndarray, player: BoardPiece, parent=None):
@@ -140,25 +139,30 @@ def generate_move_random_MCTS(
             # legal moves from this state
             self.untried_moves = [c for c in range(BOARD_COLS) if state[BOARD_ROWS - 1, c] == NO_PLAYER]
 
-        def uct_select_child(self):
-            # pick child with highest UCT value
-            log_parent_visits = math.log(self.visits)
-            def uct(c):
-                return (c.wins / c.visits) + EXPLORATION_COEF * math.sqrt(log_parent_visits / c.visits)
-            return max(self.children, key=uct)
+        def uct_value(self, total_simulation: int) -> float:
+            if self.visits == 0:
+                return float('inf')
+            win_rate = self.wins / self.visits
+            exploration = EXPLORATION_COEF * math.sqrt(math.log(total_simulation) / self.visits)
+            return win_rate + exploration
 
-        def expand(self):
+        def select_child(self) -> "MCTSNode":
+            # pick child with highest UCT value
+            return max(self.children, key=lambda c: c.uct_value(self.visits))
+
+        def expand(self) -> "MCTSNode":
             # expand by creating a new child for one untried move
             move = self.untried_moves.pop()
             new_state = self.state.copy()
             apply_player_action(new_state, move, self.player)
             next_player = PLAYER1 if self.player == PLAYER2 else PLAYER2
-            child = Node(new_state, next_player, parent=self)
+            child = MCTSNode(new_state, next_player, parent=self)
             self.children.append(child)
             return child
 
         def update(self, result_player: BoardPiece):
             self.visits += 1
+            # if draw, do not update wins
             if result_player == self.player:
                 self.wins += 1
 
@@ -180,13 +184,13 @@ def generate_move_random_MCTS(
             current = PLAYER1 if current == PLAYER2 else PLAYER2
 
     # root of search tree
-    root = Node(board, player)
-
+    root = MCTSNode(board, player)
+    # Main MCTS loop
     for _ in range(ITERATIONS):
         node = root
         # 1) Selection
         while node.untried_moves == [] and node.children:
-            node = node.uct_select_child()
+            node = node.select_child()
         # 2) Expansion
         if node.untried_moves:
             node = node.expand()
@@ -202,9 +206,9 @@ def generate_move_random_MCTS(
     # determine which column that was
     for col in range(BOARD_COLS):
         # compare states
-        st = board.copy()
-        apply_player_action(st, col, player)
-        if np.array_equal(st, best_child.state):
+        trial = board.copy()
+        apply_player_action(trial, col, player)
+        if np.array_equal(trial, best_child.state):
             return PlayerAction(col), saved_state
 
     # Fallback
