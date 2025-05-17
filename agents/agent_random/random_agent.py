@@ -18,8 +18,8 @@ from game_utils import (
 
 # Module-level parameters, overrideable for testing
 ITERATIONS = 1000
-EXPLORATION_COEF = math.sqrt(2)
-RANDOM = random
+EXPLORATION_COEF = math.sqrt(2) # UCT exploration coefficient
+#RANDOM = random
 
 class MCTSNode:
     __slots__ = (
@@ -78,7 +78,7 @@ def simulate(state: np.ndarray, player_to_move: BoardPiece) -> BoardPiece | None
             return None
         # random playout
         valid = [c for c in range(BOARD_COLS) if b[BOARD_ROWS - 1, c] == NO_PLAYER]
-        move = RANDOM.choice(valid)
+        move = random.choice(valid)
         apply_player_action(b, move, current)
         current = PLAYER1 if current == PLAYER2 else PLAYER2
 
@@ -91,8 +91,17 @@ def generate_move_random(
     """
     Monte Carlo Tree Search on a fixed number of iterations.
     """
-    root = MCTSNode(board, player)
+    if ITERATIONS <= 0:
+        # Fallback to a random valid move
+        valid_moves = [col for col in range(board.shape[1]) if board[0, col] == NO_PLAYER]
+        if not valid_moves:
+            raise ValueError("No valid moves available.")
+        action = random.choice(valid_moves)
+        return action, saved_state
 
+    root = MCTSNode(board, player)
+    #if ITERATIONS <= 0:
+       # raise ValueError("ITERATIONS must be greater than 0")
     for _ in range(ITERATIONS):
         node = root
         # 1) Selection
@@ -120,7 +129,7 @@ def generate_move_random(
 
     # fallback
     valid_moves = [c for c in range(BOARD_COLS) if board[BOARD_ROWS - 1, c] == NO_PLAYER]
-    return PlayerAction(RANDOM.choice(valid_moves)), saved_state
+    return PlayerAction(random.choice(valid_moves)), saved_state
 
 # Alias for compatibility
 random_agent = generate_move_random
