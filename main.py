@@ -1,7 +1,7 @@
 from typing import Callable
 import time
 
-from agents.agent_random.random import generate_move_random, generate_move_random_MCTS
+from agents.agent_random.random import generate_move_random, generate_move_random
 from game_utils import PLAYER1, PLAYER2, PLAYER1_PRINT, PLAYER2_PRINT, GameState, MoveStatus, GenMove
 from game_utils import initialize_game_state, pretty_print_board, apply_player_action, check_end_state, check_move_status
 from agents.agent_human_user import user_move
@@ -67,8 +67,6 @@ def human_vs_agent(
 
 if __name__ == "__main__":
     #human_vs_agent(user_move)
-    #human_vs_agent(generate_move_random, user_move, "Negamax-Bot", "Human")
-    human_vs_agent(generate_move_random_MCTS, user_move, "MCTS-Bot", "Human")
-    #human_vs_agent(generate_move_random_MCTS, generate_move_random_MCTS, "MCTS-Bot1", "MCTS-Bot2")
-    # — or — both bots
-     #human_vs_agent(generate_move_random, generate_move_random,"Bot 1", "Bot 2")
+    #human_vs_agent(generate_move_random, user_move, "MCTS-Bot", "Human")
+    human_vs_agent(generate_move_random, generate_move_random, "MCTS-Bot1", "MCTS-Bot2")
+   
