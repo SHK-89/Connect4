@@ -1,7 +1,6 @@
 from typing import Callable
 import time
-
-from agents.agent_random.random import generate_move_random, generate_move_random
+from agents.agent_random.random_agent import generate_move_random
 from game_utils import PLAYER1, PLAYER2, PLAYER1_PRINT, PLAYER2_PRINT, GameState, MoveStatus, GenMove
 from game_utils import initialize_game_state, pretty_print_board, apply_player_action, check_end_state, check_move_status
 from agents.agent_human_user import user_move
