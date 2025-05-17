@@ -114,12 +114,15 @@ def apply_player_action(board: np.ndarray, action: PlayerAction, player: BoardPi
     if not (0 <= action < board.shape[1]):
         raise ValueError(f"Column {action} is out of bounds.")
 
+    # Check if the column is full
+    if all(board[row, action] != NO_PLAYER for row in range(board.shape[0])):
+        raise ValueError(f"Column {action} is full. Cannot apply player action.")
+
     # Find the lowest open row in the specified column
     for row in range(INDEX_LOWEST_ROW, INDEX_HIGHEST_ROW + 1):
         if board[row, action] == NO_PLAYER:
             board[row, action] = player
             return
-    raise ValueError(f"Column {action} is full. Cannot apply player action.")
 
 
 def connected_four(board: np.ndarray, player: BoardPiece) -> bool:
