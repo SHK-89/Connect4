@@ -1,0 +1,2 @@
+def ran():
+    return None
