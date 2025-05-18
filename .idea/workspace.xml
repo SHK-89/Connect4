@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18bf6b5c-1076-485c-b635-5c9e6e114d14" name="Changes" comment="change code regarding test cases.">
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agents/agent_random/random_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agents/agent_random/random_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_random_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_random_agent.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Python Unit Test" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="d4bf30a9-30e5-45f9-8e3b-8c982c701b14" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2wLxLSi0ZxIN0XGRgahuFHmTH7q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_game_utils.test_apply_player_action_full.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_apply_player_action_lower_bound.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_apply_player_action_upper_bound.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_apply_player_action_valid.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_end_state_draw.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_end_state_still_playing.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_end_state_win.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_column_full.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_empty_board.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_lower_bound.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_upper_bound.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_valid.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_check_move_status_wrong_type.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_diagonal.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_diagonal_reverse.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_empty_board.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_full_board.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_horizontal.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_no_connection.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_not_connected.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_connected_four_vertical.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_game_utils.test_apply_player_action.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_game_utils.test_check_end_state.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_game_utils.test_check_move_statue.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_game_utils.test_connect_4.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_game_utils.test_initialize_game_state.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_initialize_game.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_initialize_game_state.executor": "Run",
+    "Python tests.Python tests for test_game_utils.test_pretty_print_and_string_to_board.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_apply_player_action_invalid.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_apply_player_action_valid.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_end_state_draw.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_end_state_still_playing.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_end_state_win.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_move_status_full_column.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_move_status_invalid_type.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_check_move_status_valid.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_connected_four_diagonal.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_connected_four_horizontal.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_connected_four_no_connection.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_connected_four_not_connected.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_connected_four_vertical.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_initialize_game_state.executor": "Run",
+    "Python tests.Python tests for test_game_utils_new.test_pretty_print_and_string_to_board.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_children_wins_and_visits_start_empty_or_zero.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_expand_creates_child_and_updates_untried_moves.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_expand_until_exhausted_untried_moves.executor": "Debug",
+    "Python tests.Python tests for test_random_agent.test_fallback_when_no_iterations.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_generate_move_random.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_generate_move_random_fallback.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_generate_move_random_raises_on_non_positive_iterations.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_generate_move_random_raises_on_zero_iterations.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_generate_move_random_runs_with_positive_iterations.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_mctsnode_init_defaults.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_mctsnode_init_defaults.test_children_wins_and_visits_start_empty_or_zero.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_mctsnode_init_defaults.test_state_player_and_parent_are_recorded.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_saved_state_preserved.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_select_child_prefers_higher_uct.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_select_child_prefers_unvisited.executor": "Debug",
+    "Python tests.Python tests for test_random_agent.test_selects_expanded_move.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_should_not_mutate_untried_moves.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_simulate_detects_draw_on_full_board.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_simulate_detects_win.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_simulate_random_playout.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_state_player_and_parent_are_recorded.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_uct_value_computation_with_visits.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_uct_value_edge_case_total_sim_one.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_uct_value_infinite_when_unvisited.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_untried_moves_on_empty_board_covers_all_columns.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_update_increments_visits_always.executor": "Debug",
+    "Python tests.Python tests for test_random_agent.test_update_increments_wins_only_on_match.executor": "Run",
+    "Python tests.Python tests for test_random_agent.test_update_multiple_nodes_independent.executor": "Debug",
+    "Python tests.Python tests in test_game_utils.py.executor": "Run",
+    "Python tests.Python tests in test_game_utils_new.py.executor": "Run",
+    "Python tests.Python tests in test_random_agent.py.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_apply_player_action.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_apply_player_action_full.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_apply_player_action_invalid.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_apply_player_action_out_of_bounds.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_apply_player_action_valid.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_end_state_both_players_win.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_end_state_draw.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_end_state_still_playing.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_end_state_win.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_column_full.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_empty_board.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_lower_bound.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_negative.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_negative_bound.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_out_of_bound.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_positive_bound.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_valid.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_check_move_status_wrong_type.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_diagonal.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_diagonal_reverse.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_empty_board.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_full_board.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_horizontal.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_no_connection.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_connected_four_vertical.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_initialize_game.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_initialize_game_state.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_pretty_print_board.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_pretty_print_to_string.executor": "Run",
+    "Python tests.pytest for test_game_utils.test_pretty_print_to_string_to_board.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.game_utils.executor": "Run",
+    "Python.human_user.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.radom_agent (1).executor": "Run",
+    "Python.radon_agent.executor": "Run",
+    "Python.random.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test_game_utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/[Master_BCCN]/6.MI_TU_ISIS/MI_2/HW/3_KernelPCA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="pythonProject1" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="pythonProject1" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\[Master_BCCN]\9.Programming\pythonProject1\" />
+      <recent name="D:\Programming\pythonProject1\agents" />
+      <recent name="D:\Programming\pythonProject1\agents\agent_xy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_random_agent.test_selects_expanded_move">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_random_agent.test_saved_state_preserved" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_random_agent.test_saved_state_preserved&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_random_agent.test_selects_expanded_move" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_random_agent.test_selects_expanded_move&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_random_agent.test_simulate_detects_win" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_random_agent.test_simulate_detects_win&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_random_agent.test_simulate_random_playout" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_random_agent.test_simulate_random_playout&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_game_utils.test_apply_player_action_valid" type="tests" factoryName="py.test" nameIsGenerated="true">
+      <module name="pythonProject1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_game_utils.test_apply_player_action_valid&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python tests.pytest for test_game_utils.test_apply_player_action_valid" />
+      <item itemvalue="Python tests.Python tests for test_random_agent.test_selects_expanded_move" />
+      <item itemvalue="Python tests.Python tests for test_random_agent.test_saved_state_preserved" />
+      <item itemvalue="Python tests.Python tests for test_random_agent.test_simulate_detects_win" />
+      <item itemvalue="Python tests.Python tests for test_random_agent.test_simulate_random_playout" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_random_agent.test_selects_expanded_move" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests for test_random_agent.test_saved_state_preserved" />
+        <item itemvalue="Python tests.Python tests for test_random_agent.test_simulate_random_playout" />
+        <item itemvalue="Python tests.Python tests for test_random_agent.test_simulate_detects_win" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18bf6b5c-1076-485c-b635-5c9e6e114d14" name="Changes" comment="" />
+      <created>1745834599210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745834599210</updated>
+      <workItem from="1745834600306" duration="460000" />
+      <workItem from="1745871570439" duration="970000" />
+      <workItem from="1745900892454" duration="515000" />
+      <workItem from="1746124712945" duration="3794000" />
+      <workItem from="1746210089408" duration="1329000" />
+      <workItem from="1746212269537" duration="2734000" />
+      <workItem from="1746292766568" duration="819000" />
+      <workItem from="1746354883061" duration="1670000" />
+      <workItem from="1746365877341" duration="2445000" />
+      <workItem from="1746428696380" duration="1596000" />
+      <workItem from="1746452795390" duration="655000" />
+      <workItem from="1746862332051" duration="6282000" />
+      <workItem from="1746871154649" duration="16384000" />
+      <workItem from="1746944044461" duration="5688000" />
+      <workItem from="1747037944628" duration="4553000" />
+      <workItem from="1747043076315" duration="1516000" />
+      <workItem from="1747067138063" duration="9981000" />
+      <workItem from="1747082404329" duration="151000" />
+      <workItem from="1747114825608" duration="1309000" />
+      <workItem from="1747120956411" duration="1208000" />
+      <workItem from="1747200609564" duration="1209000" />
+      <workItem from="1747463480364" duration="2474000" />
+      <workItem from="1747467978136" duration="13938000" />
+      <workItem from="1747492221750" duration="250000" />
+      <workItem from="1747504566969" duration="2170000" />
+      <workItem from="1747506779680" duration="6513000" />
+      <workItem from="1747552569592" duration="473000" />
+    </task>
+    <task id="LOCAL-00001" summary="Completed the Minimax algorithm">
+      <option name="closed" value="true" />
+      <created>1746871234750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746871234750</updated>
+    </task>
+    <task id="LOCAL-00002" summary="compelete my test. some with error. need to be checked.">
+      <option name="closed" value="true" />
+      <created>1746892187815</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746892187815</updated>
+    </task>
+    <task id="LOCAL-00003" summary="compelete my test. some with error. need to be checked.">
+      <option name="closed" value="true" />
+      <created>1746905429766</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905429766</updated>
+    </task>
+    <task id="LOCAL-00004" summary="compelete my test. some with error. need to be checked.">
+      <option name="closed" value="true" />
+      <created>1746905458376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905458376</updated>
+    </task>
+    <task id="LOCAL-00005" summary="compelete my test. some with error. need to be checked.">
+      <option name="closed" value="true" />
+      <created>1746905480020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905480020</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Need to check test.">
+      <option name="closed" value="true" />
+      <created>1747067179581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747067179581</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Finally completed test cases for game util. need to check the agent!">
+      <option name="closed" value="true" />
+      <created>1747082441788</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747082441788</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add iml.">
+      <option name="closed" value="true" />
+      <created>1747471553141</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747471553141</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change python version.">
+      <option name="closed" value="true" />
+      <created>1747471585758</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747471585758</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add some comments">
+      <option name="closed" value="true" />
+      <created>1747471638954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747471638954</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add test for agent">
+      <option name="closed" value="true" />
+      <created>1747487020629</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747487020629</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add init">
+      <option name="closed" value="true" />
+      <created>1747487032042</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747487032042</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added test.">
+      <option name="closed" value="true" />
+      <created>1747504618719</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747504618719</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change code regarding test cases.">
+      <option name="closed" value="true" />
+      <created>1747517766432</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747517766432</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change code regarding test cases.">
+      <option name="closed" value="true" />
+      <created>1747517775121</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1747517775121</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="5285e437-c084-47c1-bc8f-0c96d407d8d4" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="5285e437-c084-47c1-bc8f-0c96d407d8d4">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="date">
+                    <value>
+                      <list>
+                        <option value="1746785458332" />
+                        <option value="" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completed the Minimax algorithm" />
+    <MESSAGE value="compelete my test. some with error. need to be checked." />
+    <MESSAGE value="Need to check test." />
+    <MESSAGE value="Finally completed test cases for game util. need to check the agent!" />
+    <MESSAGE value="add iml." />
+    <MESSAGE value="change python version." />
+    <MESSAGE value="add some comments" />
+    <MESSAGE value="add test for agent" />
+    <MESSAGE value="add init" />
+    <MESSAGE value="added test." />
+    <MESSAGE value="change code regarding test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="change code regarding test cases." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game_utils.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_game_utils.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game_utils.py</url>
+          <line>197</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/agents/agent_random/random_agent.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>211</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/agents/agent_random/random_agent.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>190</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>191</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>212</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/agents/agent_random/random_agent.py</url>
+          <line>160</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>274</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_random_agent.py</url>
+          <line>276</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/agents/agent_random/random_agent.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="BOARD_ROWS" />
+        <watch expression="board[BOARD_ROWS - 1, 3]" />
+        <watch expression="PLAYER1" />
+        <watch expression="BOARD_COLS" />
+        <watch expression="board.shape[1]" />
+        <watch expression="node.visits" />
+        <watch expression="target" />
+        <watch expression="attr" />
+        <watch expression="module" />
+      </configuration>
+      <configuration name="PythonConfigurationType">
+        <watch expression="node" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Connect4$random.coverage" NAME="random Coverage Results" MODIFIED="1747472248912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_random" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_end_state_still_playing.coverage" NAME="pytest for test_game_utils.test_check_end_state_still_playing Coverage Results" MODIFIED="1747081129751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_apply_player_action_full.coverage" NAME="pytest for test_game_utils.test_apply_player_action_full Coverage Results" MODIFIED="1747081709983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_horizontal.coverage" NAME="pytest for test_game_utils.test_connected_four_horizontal Coverage Results" MODIFIED="1747079747748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_vertical.coverage" NAME="pytest for test_game_utils.test_connected_four_vertical Coverage Results" MODIFIED="1747079744429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_diagonal_reverse.coverage" NAME="pytest for test_game_utils.test_connected_four_diagonal_reverse Coverage Results" MODIFIED="1747081805994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_empty_board.coverage" NAME="pytest for test_game_utils.test_check_move_status_empty_board Coverage Results" MODIFIED="1747081515150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$test_game_utils.coverage" NAME="test_game_utils Coverage Results" MODIFIED="1747471304385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pythonProject1$human_user.coverage" NAME="human_user Coverage Results" MODIFIED="1746863535163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_human_user" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_lower_bound.coverage" NAME="pytest for test_game_utils.test_check_move_status_lower_bound Coverage Results" MODIFIED="1747081570356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_valid.coverage" NAME="pytest for test_game_utils.test_check_move_status_valid Coverage Results" MODIFIED="1747081394263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_full_board.coverage" NAME="pytest for test_game_utils.test_connected_four_full_board Coverage Results" MODIFIED="1747079732472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$main.coverage" NAME="main Coverage Results" MODIFIED="1747517790245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_end_state_draw.coverage" NAME="pytest for test_game_utils.test_check_end_state_draw Coverage Results" MODIFIED="1747081048521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_end_state_both_players_win.coverage" NAME="pytest for test_game_utils.test_check_end_state_both_players_win Coverage Results" MODIFIED="1747081155263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$radon_agent.coverage" NAME="radon_agent Coverage Results" MODIFIED="1747472430042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_random" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_pretty_print_to_string_to_board.coverage" NAME="pytest for test_game_utils.test_pretty_print_to_string_to_board Coverage Results" MODIFIED="1747081730036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pythonProject1$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1746863503830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_human_user" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_initialize_game_state.coverage" NAME="pytest for test_game_utils.test_initialize_game_state Coverage Results" MODIFIED="1747081734463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$game_utils.coverage" NAME="game_utils Coverage Results" MODIFIED="1747470892549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_apply_player_action_invalid.coverage" NAME="pytest for test_game_utils.test_apply_player_action_invalid Coverage Results" MODIFIED="1747077341001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pythonProject1$.coverage" NAME=" Coverage Results" MODIFIED="1746357245545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_end_state_win.coverage" NAME="pytest for test_game_utils.test_check_end_state_win Coverage Results" MODIFIED="1747079720975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_out_of_bound.coverage" NAME="pytest for test_game_utils.test_check_move_status_out_of_bound Coverage Results" MODIFIED="1747081431670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_initialize_game.coverage" NAME="pytest for test_game_utils.test_initialize_game Coverage Results" MODIFIED="1747471299636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_no_connection.coverage" NAME="pytest for test_game_utils.test_connected_four_no_connection Coverage Results" MODIFIED="1747077329464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_negative.coverage" NAME="pytest for test_game_utils.test_check_move_status_negative Coverage Results" MODIFIED="1747081542891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_negative_bound.coverage" NAME="pytest for test_game_utils.test_check_move_status_negative_bound Coverage Results" MODIFIED="1747081557464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$.coverage" NAME=" Coverage Results" MODIFIED="1747552592790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_apply_player_action_out_of_bounds.coverage" NAME="pytest for test_game_utils.test_apply_player_action_out_of_bounds Coverage Results" MODIFIED="1747077344104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_apply_player_action.coverage" NAME="pytest for test_game_utils.test_apply_player_action Coverage Results" MODIFIED="1747077351127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1746863563665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_pretty_print_to_string.coverage" NAME="pytest for test_game_utils.test_pretty_print_to_string Coverage Results" MODIFIED="1747043579299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$radom_agent__1_.coverage" NAME="radom_agent (1) Coverage Results" MODIFIED="1747472533685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_random" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_column_full.coverage" NAME="pytest for test_game_utils.test_check_move_status_column_full Coverage Results" MODIFIED="1747081454108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_empty_board.coverage" NAME="pytest for test_game_utils.test_connected_four_empty_board Coverage Results" MODIFIED="1747079729494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_wrong_type.coverage" NAME="pytest for test_game_utils.test_check_move_status_wrong_type Coverage Results" MODIFIED="1747081478775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_check_move_status_positive_bound.coverage" NAME="pytest for test_game_utils.test_check_move_status_positive_bound Coverage Results" MODIFIED="1747081555594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_apply_player_action_valid.coverage" NAME="pytest for test_game_utils.test_apply_player_action_valid Coverage Results" MODIFIED="1747471316693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:\[Master_BCCN]\9.Programming\Connect4\tests" />
+    <SUITE FILE_PATH="coverage/pythonProject1$random.coverage" NAME="random Coverage Results" MODIFIED="1746869343951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agents/agent_random" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_pretty_print_board.coverage" NAME="pytest for test_game_utils.test_pretty_print_board Coverage Results" MODIFIED="1747043375846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Connect4$pytest_for_test_game_utils_test_connected_four_diagonal.coverage" NAME="pytest for test_game_utils.test_connected_four_diagonal Coverage Results" MODIFIED="1747079739648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
