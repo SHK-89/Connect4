@@ -1,1 +1,21 @@
-TODO imlement  test agent as well
+# Connect4 AI Project
+This project implements an AI for the classic Connect4 game using Monte Carlo Tree Search (MCTS). It includes functionality for simulating games, generating moves, and testing the AI's performance.
+
+## Features
+
+- **Monte Carlo Tree Search (MCTS)**: Implements MCTS for decision-making in Connect4.
+- **Simulation**: Simulates games to evaluate AI strategies.
+- **Unit Tests**: Comprehensive test suite to ensure correctness.
+
+## Project Structure
+
+- `agents/`: Contains the AI agents, including MCTS and random agents.
+- `tests/`: Unit tests for the agents and game logic.
+- `utils/`: Helper functions for game mechanics and board management.
+- `main.py`: Entry point for running the Connect4 game.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https:/

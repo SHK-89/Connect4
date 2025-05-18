@@ -191,6 +191,7 @@ def test_update_multiple_nodes_independent():
     node1 = MCTSNode(state=create_empty_board(), player=PLAYER1)
     node2 = MCTSNode(state=create_empty_board(), player=PLAYER2)
     node1.update(result_player=PLAYER1)
+
     node2.update(result_player=PLAYER1) # result doesn't match node2's player
     assert node1.wins == 1, "node1 should record its own win"
     assert node2.wins == 0, "node2 should not record win when result doesn't match its player"
@@ -268,7 +269,7 @@ def test_selects_expanded_move(monkeypatch):
     action, state = generate_move_random(board, PLAYER1, None)
     # After one expansion, the popped column is BOARD_COLS-1
     expected_col = BOARD_COLS - 1
-    assert action == expected_col, f"Expected expanded move {expected_col}, got {action.column}"
+    assert action == expected_col, f"Expected expanded move {expected_col}, got {action}"
     assert state is None
 
 def test_saved_state_preserved(monkeypatch):
