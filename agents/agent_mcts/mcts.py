@@ -21,7 +21,6 @@ from game_utils import (
 EXPLORATION_COEF = math.sqrt(2)  # UCT exploration coefficient
 
 class MCTSAgent:
-    #__slots__ = ("iterations")
     def __init__(self, iterations: int = 1000):
         self.iterations = iterations
 
