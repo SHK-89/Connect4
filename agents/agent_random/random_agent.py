@@ -9,10 +9,6 @@ from game_utils import (
     check_move_status, MoveStatus,
 )
 
-ITERATIONS = 1000
-EXPLORATION_COEF = math.sqrt(2)  # UCT exploration coefficient
-
-
 def generate_move_random(board: np.ndarray, player: BoardPiece, saved_state: SavedState | None
                          ) -> tuple[PlayerAction, SavedState | None]:
     """
