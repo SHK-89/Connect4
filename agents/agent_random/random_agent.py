@@ -1,4 +1,3 @@
-import math
 
 import numpy as np
 
@@ -28,7 +27,7 @@ def generate_move_random(board: np.ndarray, player: BoardPiece, saved_state: Sav
     ]
     if not valid_moves:
         raise ValueError("No valid moves available.")
-    action = np.random.choice(valid_moves)
+    action = int(np.random.choice(valid_moves))
 
     return PlayerAction(action), saved_state
 

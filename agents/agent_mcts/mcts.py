@@ -21,6 +21,7 @@ from game_utils import (
 EXPLORATION_COEF = math.sqrt(2)  # UCT exploration coefficient
 
 class MCTSAgent:
+    __slots__ = ("iterations")
     def __init__(self, iterations: int = 1000):
         self.iterations = iterations
 
@@ -60,11 +61,13 @@ class MCTSAgent:
             tuple[PlayerAction, SavedState | None]: the chosen action and the updated saved state.
         """
 
+        valid_moves = [col for col in range(board.shape[1]) if board[0, col] == NO_PLAYER]
+        if not valid_moves:
+            raise ValueError("No valid moves available.")
+
         if self.iterations <= 0:
-            valid_moves = [col for col in range(board.shape[1]) if board[0, col] == NO_PLAYER]
-            if not valid_moves:
-                raise ValueError("No valid moves available.")
-            action = random.choice(valid_moves)
+            # Fallback to random move if no iterations are set
+            action = int(random.choice(valid_moves))
             return action, saved_state
 
         root = MCTSNode(board, player)
@@ -88,13 +91,12 @@ class MCTSAgent:
         best_child = max(root.children, key=lambda c: c.visits)
 
         # find the move leading to best_child
-        for col in range(BOARD_COLS):
+        for col in valid_moves:
             trial = board.copy()
             apply_player_action(trial, col, player)
             if np.array_equal(trial, best_child.state):
                 return PlayerAction(col), saved_state
 
         # fallback
-        valid_moves = [col for col in range(BOARD_COLS) if board[BOARD_ROWS - 1, col] == NO_PLAYER]
         return PlayerAction(random.choice(valid_moves)), saved_state
 
