@@ -95,9 +95,3 @@ class MCTSNode:
         self.visits += 1
         if result_player == self.player:
             self.wins += 1
-        #elif result_player != self.player and result_player is not None:
-            # if the other player won
-         #   self.wins -= 1
-        #elif result_player is None:
-            # draw
-           # pass
