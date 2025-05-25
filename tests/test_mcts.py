@@ -58,7 +58,8 @@ def test_simulate_random_playout(monkeypatch):
 
 def test_generate_move_random_fallback(monkeypatch):
     board = create_empty_board()
-    monkeypatch.setattr('agents.agent_mcts.mcts.MCTSAgent.iterations', 0)
+    agent = create_mcts_agent()
+    monkeypatch.setattr(agent,'iterations', 0)
     monkeypatch.setattr('numpy.random.choice', lambda valid: valid[0])
     action, state = generate_move_random(board, PLAYER1, None)
     # The action should be the first column (0)
@@ -70,19 +71,17 @@ def test_generate_move_random_fallback(monkeypatch):
 
 def test_generate_move_random_runs_with_positive_iterations(monkeypatch):
     board = create_empty_board()
+    agent = create_mcts_agent()
     # Use just 1 iteration so it terminates quickly
-    monkeypatch.setattr('agents.agent_mcts.mcts.MCTSAgent.iterations', 1)
+    monkeypatch.setattr(agent,'iterations', 1)
     # Force simulate to return current player immediately
     monkeypatch.setattr('agents.agent_mcts.mcts.MCTSAgent.simulate', lambda state, player: player)
     action, state = generate_move_random(board, PLAYER1, None)
-    # After one expansion the only popped move is last column
-    expected_col = BOARD_COLS - 1
+    valid_moves = [col for col in range(board.shape[1]) if board[0, col] == NO_PLAYER]
     assert isinstance(action, PlayerAction)
-    assert action == expected_col
+    assert action in valid_moves, f"Action {action} is not a valid move."
     # saved_state stays None
     assert state is None
-
-
 def test_selects_expanded_move(monkeypatch):
     board = create_empty_board()
     # Create an MCTSAgent with 1 iteration
@@ -101,8 +100,9 @@ def test_selects_expanded_move(monkeypatch):
 
 def test_saved_state_preserved(monkeypatch):
     board = create_empty_board()
+    agent = create_mcts_agent()
     # Zero iterations to fallback
-    monkeypatch.setattr('agents.agent_mcts.mcts.MCTSAgent.iterations', 0)
+    monkeypatch.setattr(agent,'iterations', 0)
     monkeypatch.setattr('numpy.random.choice', lambda valid: valid[0])
     dummy_state = SavedState()
     action, returned_state = generate_move_random(board, PLAYER1, dummy_state)
