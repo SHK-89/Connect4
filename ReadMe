@@ -26,13 +26,4 @@ This project represents the board as a NumPy array and provides utility function
 - Horizontal, vertical, and diagonal win detection
 - Draw detection
 - Terminal-based game loop
-- Support for human or agent-based move generators
-
-## Repository Structure
-
-```text
-.
-├── connect4.py       # Main Connect Four implementation file
-├── game_utils.py     # Game constants, board utilities, move validation, and win checking
-├── main.py           # Game loop for running a match
-└── README.md         # Project documentation
+- Support for human or agent-based move generatorس
