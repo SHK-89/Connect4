@@ -1,1 +1,38 @@
-TODO imlement  test agent as well
+readme = r"""# Connect4
+
+A small Python implementation of the classic **Connect Four** game, developed as part of the BCCN programming course.
+
+The project implements the core game logic for a 6 × 7 Connect Four board, including board initialization, move validation, move application, win detection, draw detection, and a simple game loop for playing through the terminal.
+
+## Project Overview
+
+Connect Four is a two-player board game where players take turns dropping pieces into columns. A piece falls to the lowest available row in the selected column. The goal is to be the first player to connect four pieces in a row:
+
+- horizontally
+- vertically
+- diagonally from bottom-left to top-right
+- diagonally from top-left to bottom-right
+
+This project represents the board as a NumPy array and provides utility functions for managing and checking the game state.
+
+## Features
+
+- Standard Connect Four board size: **6 rows × 7 columns**
+- NumPy-based board representation
+- Human-readable board printing
+- Conversion from printed board string back to NumPy board
+- Move validation
+- In-place move application
+- Horizontal, vertical, and diagonal win detection
+- Draw detection
+- Terminal-based game loop
+- Support for human or agent-based move generators
+
+## Repository Structure
+
+```text
+.
+├── connect4.py       # Main Connect Four implementation file
+├── game_utils.py     # Game constants, board utilities, move validation, and win checking
+├── main.py           # Game loop for running a match
+└── README.md         # Project documentation
